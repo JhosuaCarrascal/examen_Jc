@@ -15,7 +15,7 @@ El sistema está basado en 5 entidades principales:
 - **DetalleVenta**: productos vendidos por venta.
 
 📌 **Modelo E-R hecho a mano** por el estudiante:  
-![Modelo E-R](modelo_er.png)
+
 
 ---
 
