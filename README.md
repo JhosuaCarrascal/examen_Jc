@@ -1,27 +1,40 @@
-# Sistema de Inventario - EXAMEN_JC
+# 📦 Examen PostgreSQL - Sistema de Inventario 
 
-Este proyecto es una solución para gestionar productos, ventas, clientes y proveedores en una tienda de tecnología.
+Este proyecto fue desarrollado como parte de un examen práctico. Simula un sistema de gestión de inventario para una tienda de tecnología utilizando PostgreSQL.
 
-## Estructura del proyecto
+---
 
-- `modelo_er.png`: Diagrama E-R del sistema.
-- `db.sql`: Creación de tablas y restricciones.
-- `insert.sql`: Inserción de datos de prueba (15 por tabla).
-- `queries.sql`: Consultas para análisis de ventas y clientes.
-- `procedureAndFunctions.sql`: Función para registrar ventas validando stock.
-- `README.md`: Documentación y pasos de ejecución.
+## 🧩 Modelo Entidad-Relación
 
-## Cómo ejecutar
+El sistema está basado en 5 entidades principales:
 
-1. Crear la base de datos en PostgreSQL.
-2. Ejecutar `db.sql` para crear las tablas.
-3. Ejecutar `insert.sql` para cargar los datos de prueba.
-4. Ejecutar `queries.sql` para analizar datos.
-5. Ejecutar la función `registrar_venta` con:
+- **Producto**: nombre, categoría, precio, stock, proveedor.
+- **Proveedor**: nombre, contacto.
+- **Cliente**: nombre, correo, teléfono.
+- **Venta**: fecha, cliente.
+- **DetalleVenta**: productos vendidos por venta.
+
+📌 **Modelo E-R hecho a mano** por el estudiante:  
+![Modelo E-R](modelo_er.png)
+
+---
+
+## 📁 Archivos del Proyecto
+
+| Archivo | Descripción |
+|--------|-------------|
+| `db.sql` | Script para crear las tablas con restricciones y relaciones. |
+| `insert.sql` | Inserciones de datos realistas (15 o más por tabla). |
+| `queries.sql` | Consultas avanzadas requeridas por el examen. |
+| `procedureAndFunctions.sql` | Procedimiento almacenado para registrar una venta. |
+| `modelo_er.png` | Imagen del modelo E-R hecha a mano. |
+| `README.md` | Documentación y guía de uso. |
+
+---
+
+## ⚙️ Cómo ejecutar
+
+1. Crear la base de datos en PostgreSQL:  
    ```sql
-   SELECT registrar_venta(1, 2, 3);
-   ```
+   CREATE DATABASE techzone;
 
-## Autor
-
-[Tu nombre aquí]
